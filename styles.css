@@ -1,0 +1,154 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --primary: #38bdf8;
+    --success: #4ade80;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.progress-container {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 12px;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    border: 1px solid #334155;
+    margin-bottom: 25px;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.progress-bar-bg {
+    background-color: #334155;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    background: linear-gradient(90deg, var(--primary), var(--success));
+    width: 0%;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.phase-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #334155;
+}
+
+.phase-title {
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 8px;
+}
+
+.task-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 1px solid transparent;
+}
+
+.task-row:hover {
+    background-color: #243249;
+    border-color: #3b4f6e;
+}
+
+.task-item {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    flex: 1;
+    margin-right: 15px;
+}
+
+.task-item input[type="checkbox"] {
+    margin-top: 4px;
+    margin-right: 12px;
+    transform: scale(1.2);
+    accent-color: var(--success);
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+}
+
+.task-title {
+    font-weight: 500;
+    display: block;
+}
+
+.task-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.doc-link {
+    background-color: #334155;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: all 0.2s;
+    border: 1px solid #475569;
+}
+
+.doc-link:hover {
+    background-color: #475569;
+    color: var(--text-main);
+}
+
+.completed .task-title {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}

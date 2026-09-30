@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta ESP32 & C++</title>
+    <!-- Vinculamos el archivo de estilos externos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Mi Ruta ESP32</h1>
+    <div class="subtitle">Progreso de aprendizaje autodidacta</div>
+
+    <!-- Panel de barra de progreso fija -->
+    <div class="progress-container">
+        <div class="progress-text">
+            <span>Avance General</span>
+            <span id="progress-percentage">0%</span>
+        </div>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+    </div>
+
+    <!-- Aquí se dibujarán las fases de forma dinámica con JS -->
+    <div id="phases-wrapper"></div>
+</div>
+
+<!-- Vinculamos el archivo de lógica de programación externa -->
+<script src="script.js"></script>
+</body>
+</html>
